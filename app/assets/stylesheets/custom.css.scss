@@ -1,0 +1,79 @@
+$navbar-default-bg: #cc0000;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+ul.nav a { color: white !important; }
+ul.nav a:hover { color: #B00100 !important; }
+
+body {
+  background-color: #B00100 !important;
+  padding-top: 70px;
+}
+
+.container{
+  background-color: whitesmoke;
+  padding: 12px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+#logo{
+  float: left;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+
+#logo:hover {
+  color: #B00100;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: whitesmoke;
+  background-size: cover;
+  height: 400px;
+}
+
+.jumbotron h1 {
+  color: black;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px;
+  color: #cc0000;
+}
+
+.footer small {
+  float: right;
+}
+
+.program-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.program-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#margiretta {
+  margin: 10px;
+}
+

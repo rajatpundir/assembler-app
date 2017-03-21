@@ -1,0 +1,18 @@
+<% @page_title = "Scorecard"%>
+<div class="center page-header">
+  <h2>Scorecard for [<%= @admin_user.username %>]</h2>
+</div>
+<div class="well col-xs-8 col-xs-offset-2">
+	<table class="table table-bordered table-striped table-hover table-condensed">
+		<th class="success text-center">Test Date</th>
+		<th class="success text-center">Name</th>
+		<th class="success text-center">Percentage Score</th>
+		<% @tests.each do |test| %>
+		<tr>
+			<td class="active data"> <%= test.updated_at %> </td>
+			<td class="active data"> <%= test.program.name %> </td>
+			<td class="info text-center object-code"> <%= test.score %> </td>
+		</tr>
+		<% end %>
+	</table>
+</div>

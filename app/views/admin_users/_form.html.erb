@@ -1,0 +1,55 @@
+<div class="form-group">
+  <%= f.label :year, class: 'col-sm-2 control-label' %>
+  <div class="col-sm-8">
+    <%= f.text_field :year, class: 'form-control', placeholder: 'Year of user', autofocus: true %>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :section, class: 'col-sm-2 control-label' %>
+  <div class="col-sm-8">
+    <%= f.text_field :section, class: 'form-control', placeholder: 'Section of user', autofocus: true %>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :roll_number, class: 'col-sm-2 control-label' %>
+  <div class="col-sm-8">
+    <%= f.text_field :roll_number, class: 'form-control', placeholder: 'Roll no. of user', autofocus: true %>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :first_name, class: 'col-sm-2 control-label' %>
+  <div class="col-sm-8">
+    <%= f.text_field :first_name, class: 'form-control', placeholder: 'First name of user', autofocus: true %>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :last_name, class: 'col-sm-2 control-label' %>
+  <div class="col-sm-8">
+    <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last name of user', autofocus: true %>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :email, class: 'col-sm-2 control-label' %>
+  <div class="col-sm-8">
+    <%= f.text_field :email, class: 'form-control', placeholder: 'Email of user', autofocus: true %>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :username, class: 'col-sm-2 control-label' %>
+  <div class="col-sm-8">
+    <%= f.text_field :username, class: 'form-control', placeholder: 'Username for user (required)', autofocus: true %>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :password, class: 'col-sm-2 control-label' %>
+  <div class="col-sm-8">
+    <%= f.text_field :password, class: 'form-control', placeholder: 'Password for user (required for new users)', autofocus: true %>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :superuser, class: 'col-sm-2 control-label' %>
+  <div class="col-sm-8">
+    <%= f.radio_button :superuser, 'true', autofocus: true %>Yes
+    <%= f.radio_button :superuser, 'false', autofocus: true %>No
+  </div>
+</div>

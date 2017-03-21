@@ -1,0 +1,18 @@
+<% @page_title = "Tests" %>
+<div class="text-center">
+	<h2 >Tests</h2>
+</div>
+<% @programs.each do |program| %>
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="well well-lg">
+          <div class="program-title">
+            <%= program.name %>
+          </div>
+          <div class="program-body">
+            <%= link_to("Take test",edit_test_path(program.id), :class => 'btn btn-primary')%>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>

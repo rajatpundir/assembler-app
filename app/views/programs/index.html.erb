@@ -1,0 +1,22 @@
+<% @page_title = "Manage Tests" %>
+<div class="center page-header">
+  <h2>Manage Tests</h2>
+  <%= link_to "Add new Test", new_program_path, :class => 'btn btn-primary' %>
+</div>
+<% @programs.each do |program| %>
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="well well-lg">
+          <div class="program-title">
+            <%= program.name %>
+          </div>
+          <div class="program-body">
+            <%= link_to("Scoreboard", programs_score_path(program), :class => 'btn btn-primary') %>
+            <%= link_to("Show", program_path(program), :class => 'btn btn-info') %>
+            <%= link_to("Edit", edit_program_path(program), :class => 'btn btn-info') %>
+            <%= link_to("Delete", delete_program_path(program), :class => 'btn btn-danger') %>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>

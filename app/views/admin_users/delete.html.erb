@@ -1,0 +1,13 @@
+<% @page_title = "Delete User"%>
+<%= form_for(@admin_user,:method => 'delete') do |f| %>
+    <div class="center page-header">
+      <h2>Delete [<%= f.object.username %>]?</h2>
+    </div>
+    <div class="center form-group">
+      <p>Are you sure you want to delete this user?</p>
+      <div class="col-sm-12">
+        <%= f.submit "Delete User",class: 'btn btn-danger btn-lg' %>
+      </div>
+    </div>
+<% end %>
+

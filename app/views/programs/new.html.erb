@@ -1,0 +1,43 @@
+<% @page_title = "Create Test" %>
+<div class="center page-header">
+  <h2>Create Test</h2>
+</div>
+	<%= form_for(@program, :url=> programs_path, :method => 'post', :html => {:class => 'form-horizontal', :role => 'form'} ) do |f| %>
+      <div class="form-group">
+        <%= f.label :name, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-8">
+          <%= f.text_field :name, class: 'form-control', placeholder: 'Name of test', autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :position, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-8">
+          <%= f.text_field :position, class: 'form-control', placeholder: 'Position in list', autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :addressing, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-8">
+          <%= f.radio_button :addressing, 'true', autofocus: true %>Yes
+          <%= f.radio_button :addressing, 'false', autofocus: true %>No
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :visible, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-8">
+          <%= f.radio_button :visible, 'true', autofocus: true %>Yes
+          <%= f.radio_button :visible, 'false', autofocus: true %>No
+        </div>
+      </div>
+    <div class="form-group">
+      <%= f.label :source, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-8">
+        <%= f.text_area :source, class: 'form-control', placeholder: 'Write source assembly code here', autofocus: true %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <%= f.submit "Create Test", class: 'btn btn-primary btn-lg' %>
+      </div>
+    </div>
+	<% end %>

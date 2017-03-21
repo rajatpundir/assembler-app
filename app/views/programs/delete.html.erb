@@ -1,0 +1,15 @@
+<% @page_title = "Delete Test"%>
+<%= form_for(@program,:method => 'delete') do |f| %>
+<div class="center page-header">
+  <h2>Delete <%= f.object.name %>?</h2>
+</div>
+    <div class="center form-group">
+      <p>Are you sure you wish to permanently delete this?</p>
+      <div class="col-sm-12">
+        <%= f.submit "Delete Test",class: 'btn btn-danger btn-lg' %>
+      </div>
+    </div>
+<% end %>
+
+
+

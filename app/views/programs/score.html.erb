@@ -1,0 +1,27 @@
+<% @page_title = "Scoreboard"%>
+<div class="center page-header">
+  <h2>Scoreboard for [<%= @program_name %>]</h2>
+</div>
+<div class="well col-xs-8 col-xs-offset-2">
+  <table class="table table-bordered table-striped table-hover table-condensed" >
+    <th>Year</th>
+    <th>Section</th>
+    <th>Roll number</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Username</th>
+    <th>Percentage Score</th>
+    <% @users.each do |user| %>
+        <tr>
+          <td><%= user.year %></td>
+          <td><%= user.section %></td>
+          <td><%= user.roll_number %></td>
+          <td><%= user.name %></td>
+          <td><%= mail_to(user.email) %></td>
+          <td><%= user.username %></td>
+          <% test = Test.where("program_id=#{@program} and admin_user_id=#{user.id}").first %>
+          <td><%= test.score %></td>
+        </tr>
+    <% end %>
+  </table>
+</div>

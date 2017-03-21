@@ -1,0 +1,17 @@
+<div class="center page-header">
+  <h2>Show [<%= @program.name %>]</h2>
+</div>
+<div class="well col-xs-8 col-xs-offset-2">
+  <table class="table table-bordered table-striped table-hover table-condensed">
+    <th class="success text-center">Address</th>
+    <th class="success text-center">Program</th>
+    <th class="success text-center">Object Code</th>
+    <% @lines.each do |line| %>
+        <tr>
+          <td class="active data"> <%= line.address %> </td>
+          <td class="active data"> <%= line.data %> </td>
+          <td class="info text-center object-code"> <%= line.code %> </td>
+        </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,24 @@
+<div class="center jumbotron">
+  <h1>Welcome!</h1>
+  <%= form_tag(access_attempt_login_path, :method => :post, :class => 'form-horizontal', :role => 'form' ) do %>
+      <div class="form-group">
+        <%= label_tag(:username, nil, class: 'col-sm-2 control-label') %>
+        <div class="col-sm-8">
+          <%= text_field_tag(:username, params[:username], :class => 'form-control', :placeholder => 'Enter Username') %>
+        </div>
+      </div>
+      <div class="form-group">
+        <br>
+        <%= label_tag(:password, nil, class: 'col-sm-2 control-label') %>
+        <div class="col-sm-8">
+          <%= password_field_tag(:password, nil, :class => 'form-control', :placeholder => 'Enter Password') %>
+        </div>
+      </div>
+      <br/>
+      <div class="form-group">
+        <div class="col-sm-6">
+          <%= submit_tag("Login", :class => 'btn btn-danger btn-lg')  %>
+        </div>
+      </div>
+  <% end %>
+</div>

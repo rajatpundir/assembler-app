@@ -1,0 +1,26 @@
+<% @page_title = "Edit Test" %>
+<div class="center page-header">
+  <h2>Edit Test</h2>
+</div>
+<div class="center well col-xs-6 col-xs-offset-3">
+  <%= form_tag '/lines/update', class: 'form-horizontal', role: 'form' do %>
+      <input type="hidden" name="_method" value="patch">
+      <div id="margiretta">
+        <%= submit_tag "Finish", class: 'btn btn-primary btn-lg' %>
+        <%= submit_tag "Re-assemble", class: 'btn btn-info btn-lg' %>
+        <%= submit_tag "Add a line", class: 'btn btn-info btn-lg' %>
+        <%= submit_tag "Delete last line", class: 'btn btn-info btn-lg' %>
+      </div>
+      <% @line.each do |line| %>
+          <%= fields_for "lines[]", line do |f| %>
+              <table>
+                <tr>
+                  <td> <%= f.text_field :address, class: 'form-control', autofocus: true %> </td>
+                  <td> <%= f.text_field :data, class: 'form-control', autofocus: true %> </td>
+                  <td> <%= f.text_field :code, class: 'form-control', autofocus: true %> </td>
+                </tr>
+              </table>
+          <% end %>
+      <% end %>
+  <% end %>
+</div>

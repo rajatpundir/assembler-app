@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> <%= @page_title || "Assembler" %> </title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<body>
+<% user = AdminUser.where(:username => session[:username]).first %>
+<% if user %>
+    <%= render 'layouts/navigation', :is_logged_in => true, :user => user %>
+<% else %>
+    <%= render 'layouts/navigation', :is_logged_in => false %>
+<% end %>
+<%= render 'layouts/messages' %>
+<div class="container">
+  <%= yield %>
+</div>
+<%= render 'layouts/footer' %>
+</body>
+</html>
